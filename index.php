@@ -10,38 +10,47 @@ Olimpia Milano - Cantù | 55-60 -->
 
 <?php
 
-$array = partite (
-    {
-        "partita1" => {"squadraDiCasa"=> "Olimpia Milano",
+$partite = [
+    
+                        ["squadraDiCasa" => "Olimpia Milano",
 
-                        "squadrOspite"=> "Cantù",
+                        "squadraOspite"=> "Cantù",
 
                         "puntiSquadraDiCasa"=> "55",
 
                         "puntiSquadraOspite"=> "60"
-                        }
+                        ],   
 
-                        "partita2" => {"squadraDiCasa"=> "Sirio",
+                       ["squadraDiCasa"=> "Sirio",
 
-                            "squadrOspite"=> "Bellagio",
+                            "squadraOspite"=> "Bellagio",
     
                             "puntiSquadraDiCasa"=> "45",
     
                             "puntiSquadraOspite"=> "53"
-                        }
+                        ],
 
-                        "partita2" => {"squadraDiCasa"=> "Sirio",
+                        ["squadraDiCasa"=> "virtus",
 
-                            "squadrOspite"=> "Bellagio",
+                        "squadraOspite"=> "real",
         
                             "puntiSquadraDiCasa"=> "45",
         
                             "puntiSquadraOspite"=> "53"
-                        }
-    }
+                        ],
+    
 
-)
-
-
-
+                    ];
 ?>
+    <ul>
+        <?php foreach ( $partite as $partita) { ?>
+
+            <li>
+                <p>
+                    <?php echo $partita['squadraDiCasa'] . ' - ' . $partita['squadraOspite']. ' : ' . $partita['puntiSquadraDiCasa'] . ' - ' . $partita['puntiSquadraOspite'];?>
+                </p>
+
+            </li>
+
+            <?php } ?>
+    </ul>
